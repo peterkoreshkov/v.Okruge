@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>в.Округе Псков</title>
+    <link rel="stylesheet" href="static/styles/style.css">
+
+</head>
+
+<body class="bodyset">
+    <div class="screen">
+        <div id="main_menu" class="main_menu">
+            <h1 class="title">
+                в.Округе | Псков
+            </h1>
+            <h3 class="subtitle">
+                Привет! Это бот в.Округе Псков
+            </h3>
+            <p>
+            Я помогу вам найти мероприятия и события на ближайшую неделю.
+            </p>
+            <p>
+                ✨В моей базе информация из десятков источников с самыми интересными событиями города и области. Подборка мероприятий занимает несколько секунд.
+            </p>
+            <p>
+                💸 Узнавайте о выгодных приобретениях в Пскове с нашей новой функцией "Акции и предложения"
+            </p>
+            <div>
+                <button id="search_events_but" class="buttons">Искать мероприятия</button>
+            </div>
+            <div>
+                <button id="search_offers_but" class="buttons">Акции и предложения</button>
+            </div>
+            <div>
+                <button id="show_stats_but" class="buttons">Статистика</button>
+            </div>
+            <div>
+                <button id="show_help_but" class="buttons">Помощь</button>
+            </div>
+            <div>
+                <button id="exit" class="buttons">Выход</button>
+            </div>
+        </div>
+
+
+        <div id="choose_category_menu" class="choose_category_menu">
+            <h2 class="subtitle">Выберите категорию мероприятия</h2>
+            <div>
+                <button id="cat_all_but" class="buttons">Все</button>
+            </div>
+            <div>
+                <button id="cat_free_but" class="buttons">Бесплатные</button>
+            </div>
+            <div>
+                <button id="cat_kids_but" class="buttons">Детские</button>
+            </div>
+            <div>
+                <button id="cat_exhib_but" class="buttons">Выставки</button>
+            </div>
+            <div>
+                <button id="to_menu_from_cats_but" class="buttons">Меню</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        let tg = window.Telegram.WebApp;
+        let search_events = document.getElementById("search_events");
+        let search_offers = document.getElementById("search_offers");
+        let show_stats = document.getElementById("show_stats");
+        let show_help = document.getElementById("show_help");
+        tg.expand();
+
+    /* КНОПКИ В МЕНЮ */
+        to_menu_from_cats_but.addEventListener("click", () => {
+            document.getElementById("choose_category_menu").style.display = "none";
+            document.getElementById("main_menu").style.display = "block";
+        });
+
+    /* ИСКАТЬ МЕРОПРИЯТИЯ */
+        search_events_but.addEventListener("click", () => {
+            document.getElementById("main_menu").style.display = "none";
+            document.getElementById("choose_category_menu").style.display = "block";
+        });
+
+    /* ВЫХОД */
+        exit.addEventListener("click", () => {
+            tg.close()
+        });
+    </script>
+</body>
+</html>
