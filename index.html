@@ -118,6 +118,19 @@
             document.getElementById("choose_category_menu").style.display = "block";
         });
 
+
+        cat_all.addEventListener("click", () => {
+            let chosen_category = document.getElementById("cat_all_but").value;
+            document.getElementById("choose_category_menu").style.display = "none";
+            document.getElementById("choose_date_menu").style.display = "block";
+
+            let data = {
+                chosen_category: chosen_category;
+            }
+            tg.sendData(JSON.stringify(data))
+        });
+
+
         exit_but.addEventListener("click", () => {
 
             tg.close()
