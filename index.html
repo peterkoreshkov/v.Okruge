@@ -104,15 +104,22 @@
         let search_offers = document.getElementById("search_offers_but");
         let show_stats = document.getElementById("show_stats_but");
         let show_help = document.getElementById("show_help_but");
+        let cat_all = document.getElementById("cat_all_but");
+        let cat_free = document.getElementById("cat_free_but");
+        let cat_kids = document.getElementById("cat_kids_but");
+        let cat_exhib = document.getElementById("cat_exhib_but");
+        let to_menu_from_cats = document.getElementById("to_menu_from_cats_but");
+        let to_menu_from_dates = document.getElementById("to_menu_from_dates_but");
+        let exit_webapp = document.getElementById("exit_but);
         tg.expand();
 
         /* КНОПКИ В МЕНЮ */
-        to_menu_from_cats_but.addEventListener("click", () => {
+        to_menu_from_cats.addEventListener("click", () => {
             document.getElementById("choose_category_menu").style.display = "none";
             document.getElementById("main_menu").style.display = "block";
         });
 
-        to_menu_from_dates_but.addEventListener("click", () => {
+        to_menu_from_dates.addEventListener("click", () => {
             document.getElementById("choose_date_menu").style.display = "none";
             document.getElementById("main_menu").style.display = "block";
         });
@@ -125,7 +132,7 @@
 
         /* ВЫБОР КАТЕГОРИИ ВСЕ */
         let chosen_category = document.getElementById("cat_all_but").value;
-        cat_all_but.addEventListener("click", () => {
+        cat_all.addEventListener("click", () => {
             document.getElementById("choose_category_menu").style.display = "none";
             document.getElementById("choose_date_menu").style.display = "block";
 
@@ -137,7 +144,7 @@
 
         /* ВЫБОР КАТЕГОРИИ БЕСПЛАТНЫЕ */
         let chosen_category = document.getElementById("cat_free_but").value;
-        cat_free_but.addEventListener("click". () => {
+        cat_free.addEventListener("click". () => {
             document.getElementById("choose_category_menu").style.display = "none";
             document.getElementById("show_events_menu").style.display = "block";
 
@@ -150,7 +157,7 @@
 
         /* ВЫБОР КАТЕГОРИИ ДЕТСКИЕ */
         let chosen_category = document.getElementById("cat_free_but").value;
-        cat_kids_but.addEventListener("click". () => {
+        cat_kids.addEventListener("click". () => {
             document.getElementById("choose_category_menu").style.display = "none";
             document.getElementById("show_events_menu").style.display = "block";
 
@@ -163,7 +170,7 @@
 
         /* ВЫБОР КАТЕГОРИИ ВЫСТАВКИ */
         let chosen_category = document.getElementById("cat_free_but").value;
-        cat_exhib_but.addEventListener("click". () => {
+        cat_exhib.addEventListener("click". () => {
             document.getElementById("choose_category_menu").style.display = "none";
             document.getElementById("show_events_menu").style.display = "block";
 
@@ -174,7 +181,8 @@
         });
 
         /* ВЫХОД */
-        exit_but.addEventListener("click", () => {
+        exit_webapp.addEventListener("click", () => {
+
             tg.close()
         });
     </script>
