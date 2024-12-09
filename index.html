@@ -130,55 +130,7 @@
             document.getElementById("choose_category_menu").style.display = "block";
         });
 
-        /* ВЫБОР КАТЕГОРИИ ВСЕ */
-        let chosen_category = document.getElementById("cat_all_but").value;
-        cat_all.addEventListener("click", () => {
-            document.getElementById("choose_category_menu").style.display = "none";
-            document.getElementById("choose_date_menu").style.display = "block";
-
-            let data = {
-                chosen_category: chosen_category;
-            }
-            tg.sendData(JSON.stringify(data))
-        });
-
-        /* ВЫБОР КАТЕГОРИИ БЕСПЛАТНЫЕ */
-        let chosen_category = document.getElementById("cat_free_but").value;
-        cat_free.addEventListener("click". () => {
-            document.getElementById("choose_category_menu").style.display = "none";
-            document.getElementById("show_events_menu").style.display = "block";
-
-            let data = {
-                chosen_category: chosen_category;
-            }
-            tg.sendData(JSON.stringify(data))
-        });
-
-
-        /* ВЫБОР КАТЕГОРИИ ДЕТСКИЕ */
-        let chosen_category = document.getElementById("cat_free_but").value;
-        cat_kids.addEventListener("click". () => {
-            document.getElementById("choose_category_menu").style.display = "none";
-            document.getElementById("show_events_menu").style.display = "block";
-
-            let data = {
-                chosen_category: chosen_category;
-            }
-            tg.sendData(JSON.stringify(data))
-        });
-
-
-        /* ВЫБОР КАТЕГОРИИ ВЫСТАВКИ */
-        let chosen_category = document.getElementById("cat_free_but").value;
-        cat_exhib.addEventListener("click". () => {
-            document.getElementById("choose_category_menu").style.display = "none";
-            document.getElementById("show_events_menu").style.display = "block";
-
-            let data = {
-                chosen_category: chosen_category;
-            }
-            tg.sendData(JSON.stringify(data))
-        });
+        
 
         /* ВЫХОД */
         exit_webapp.addEventListener("click", () => {
