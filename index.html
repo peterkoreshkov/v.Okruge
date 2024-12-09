@@ -100,40 +100,41 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         let tg = window.Telegram.WebApp;
-        let search_events = document.getElementById("search_events_but");
-        let search_offers = document.getElementById("search_offers_but");
-        let show_stats = document.getElementById("show_stats_but");
-        let show_help = document.getElementById("show_help_but");
-        let cat_all = document.getElementById("cat_all_but");
-        let cat_free = document.getElementById("cat_free_but");
-        let cat_kids = document.getElementById("cat_kids_but");
-        let cat_exhib = document.getElementById("cat_exhib_but");
-        let to_menu_from_cats = document.getElementById("to_menu_from_cats_but");
-        let to_menu_from_dates = document.getElementById("to_menu_from_dates_but");
-        let exit_webapp = document.getElementById("exit_but);
         tg.expand();
+<!--        let search_events = document.getElementById("search_events_but");-->
+<!--        let search_offers = document.getElementById("search_offers_but");-->
+<!--        let show_stats = document.getElementById("show_stats_but");-->
+<!--        let show_help = document.getElementById("show_help_but");-->
+<!--        let cat_all = document.getElementById("cat_all_but");-->
+<!--        let cat_free = document.getElementById("cat_free_but");-->
+<!--        let cat_kids = document.getElementById("cat_kids_but");-->
+<!--        let cat_exhib = document.getElementById("cat_exhib_but");-->
+<!--        let to_menu_from_cats = document.getElementById("to_menu_from_cats_but");-->
+<!--        let to_menu_from_dates = document.getElementById("to_menu_from_dates_but");-->
+<!--        let exit_webapp = document.getElementById("exit_but);-->
+
 
         /* КНОПКИ В МЕНЮ */
-        to_menu_from_cats.addEventListener("click", () => {
+        to_menu_from_cats_but.addEventListener("click", () => {
             document.getElementById("choose_category_menu").style.display = "none";
             document.getElementById("main_menu").style.display = "block";
         });
 
-        to_menu_from_dates.addEventListener("click", () => {
+        to_menu_from_dates_but.addEventListener("click", () => {
             document.getElementById("choose_date_menu").style.display = "none";
             document.getElementById("main_menu").style.display = "block";
         });
 
         /* ИСКАТЬ МЕРОПРИЯТИЯ */
-        search_events.addEventListener("click", () => {
+        search_events_but.addEventListener("click", () => {
             document.getElementById("main_menu").style.display = "none";
             document.getElementById("choose_category_menu").style.display = "block";
         });
 
-        
+
 
         /* ВЫХОД */
-        exit_webapp.addEventListener("click", () => {
+        exit_but.addEventListener("click", () => {
 
             tg.close()
         });
