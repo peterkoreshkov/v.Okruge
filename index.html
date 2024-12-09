@@ -101,13 +101,14 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         let tg = window.Telegram.WebApp;
-        let search_events = document.getElementById("search_events");
-        let search_offers = document.getElementById("search_offers");
-        let show_stats = document.getElementById("show_stats");
-        let show_help = document.getElementById("show_help");
+        let search_events = document.getElementById("search_events_but");
+        let search_offers = document.getElementById("search_offers_but");
+        let show_stats = document.getElementById("show_stats_but");
+        let show_help = document.getElementById("show_help_but");
+
         tg.expand();
 
-    /* КНОПКИ В МЕНЮ */
+        /* КНОПКИ В МЕНЮ */
         to_menu_from_cats_but.addEventListener("click", () => {
             document.getElementById("choose_category_menu").style.display = "none";
             document.getElementById("main_menu").style.display = "block";
@@ -118,65 +119,65 @@
             document.getElementById("main_menu").style.display = "block";
         });
 
-    /* ИСКАТЬ МЕРОПРИЯТИЯ */
-        search_events_but.addEventListener("click", () => {
+        /* ИСКАТЬ МЕРОПРИЯТИЯ */
+        search_events.addEventListener("click", () => {
             document.getElementById("main_menu").style.display = "none";
             document.getElementById("choose_category_menu").style.display = "block";
         });
 
-    /* ВЫБОР КАТЕГОРИИ ВСЕ */
+        /* ВЫБОР КАТЕГОРИИ ВСЕ */
         let chosen_category = document.getElementById("cat_all_but").value;
         cat_all_but.addEventListener("click", () => {
             document.getElementById("choose_category_menu").style.display = "none";
             document.getElementById("choose_date_menu").style.display = "block";
 
             let data = {
-                chosen_category: chosen_category
+                chosen_category: chosen_category;
             }
             tg.sendData(JSON.stringify(data))
         });
 
-    /* ВЫБОР КАТЕГОРИИ БЕСПЛАТНЫЕ */
+        /* ВЫБОР КАТЕГОРИИ БЕСПЛАТНЫЕ */
         let chosen_category = document.getElementById("cat_free_but").value;
         cat_free_but.addEventListener("click". () => {
             document.getElementById("choose_category_menu").style.display = "none";
             document.getElementById("show_events_menu").style.display = "block";
 
             let data = {
-                chosen_category: chosen_category
+                chosen_category: chosen_category;
             }
             tg.sendData(JSON.stringify(data))
         });
 
 
-    /* ВЫБОР КАТЕГОРИИ ДЕТСКИЕ */
+        /* ВЫБОР КАТЕГОРИИ ДЕТСКИЕ */
         let chosen_category = document.getElementById("cat_free_but").value;
         cat_kids_but.addEventListener("click". () => {
             document.getElementById("choose_category_menu").style.display = "none";
             document.getElementById("show_events_menu").style.display = "block";
 
             let data = {
-                chosen_category: chosen_category
+                chosen_category: chosen_category;
             }
             tg.sendData(JSON.stringify(data))
         });
 
 
-    /* ВЫБОР КАТЕГОРИИ ВЫСТАВКИ */
+        /* ВЫБОР КАТЕГОРИИ ВЫСТАВКИ */
         let chosen_category = document.getElementById("cat_free_but").value;
         cat_exhib_but.addEventListener("click". () => {
             document.getElementById("choose_category_menu").style.display = "none";
             document.getElementById("show_events_menu").style.display = "block";
 
             let data = {
-                chosen_category: chosen_category
+                chosen_category: chosen_category;
             }
             tg.sendData(JSON.stringify(data))
         });
 
 
 
-    /* ВЫХОД */
+        /* ВЫХОД */
         exit_but.addEventListener("click", () => {
             tg.close()
         });
