@@ -49,16 +49,16 @@
         <div id="choose_category_menu" class="choose_category_menu">
             <h2 class="subtitle">Выберите категорию мероприятия</h2>
             <div>
-                <button id="cat_all_but" class="buttons">Все</button>
+                <button id="cat_all_but" class="buttons" value="Все">Все</button>
             </div>
             <div>
-                <button id="cat_free_but" class="buttons">Бесплатные</button>
+                <button id="cat_free_but" class="buttons" value="Бесплатные">Бесплатные</button>
             </div>
             <div>
-                <button id="cat_kids_but" class="buttons">Детские</button>
+                <button id="cat_kids_but" class="buttons" value="Детские">Детские</button>
             </div>
             <div>
-                <button id="cat_exhib_but" class="buttons">Выставки</button>
+                <button id="cat_exhib_but" class="buttons" value="Выставки">Выставки</button>
             </div>
             <div>
                 <button id="to_menu_from_cats_but" class="buttons">Меню</button>
@@ -109,6 +109,11 @@
             document.getElementById("main_menu").style.display = "block";
         });
 
+        to_menu_from_dates_but.addEventListener("click", () => {
+            document.getElementById("choose_date_menu").style.display = "none";
+            document.getElementById("main_menu").style.display = "block";
+        });
+
     /* ИСКАТЬ МЕРОПРИЯТИЯ */
         search_events_but.addEventListener("click", () => {
             document.getElementById("main_menu").style.display = "none";
@@ -116,9 +121,16 @@
         });
 
     /* ВЫБОР КАТЕГОРИИ ВСЕ */
+        let chosen_category = document.getElementById("cat_all_but").value;
         cat_all_but.addEventListener("click", () => {
             document.getElementById("choose_category_menu").style.display = "none";
-            document.getElementById("choose_datesty_menu").style.display = "block";
+            document.getElementById("choose_date_menu").style.display = "block";
+
+        let data = {
+            chosen_category: chosen_category
+        }
+
+        tg.sendData(JSON.stringify(data))
         });
 
     /* ВЫХОД */

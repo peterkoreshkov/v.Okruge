@@ -25,6 +25,10 @@
     display: none;
 }
 
+.choose_date_menu {
+    display: none;
+}
+
 .title {
     font-size: 30px;
     font-weight: bold;
