@@ -129,44 +129,51 @@
         cat_all_but.addEventListener("click", () => {
             document.getElementById("choose_category_menu").style.display = "none";
             document.getElementById("choose_date_menu").style.display = "block";
+
+            let data = {
+                chosen_category: chosen_category
+            }
+            tg.sendData(JSON.stringify(data))
         });
-        let data = {
-            chosen_category: chosen_category
-        }
-        tg.sendData(JSON.stringify(data))
 
     /* ВЫБОР КАТЕГОРИИ БЕСПЛАТНЫЕ */
         let chosen_category = document.getElementById("cat_free_but").value;
         cat_free_but.addEventListener("click". () => {
             document.getElementById("choose_category_menu").style.display = "none";
             document.getElementById("show_events_menu").style.display = "block";
+
+            let data = {
+                chosen_category: chosen_category
+            }
+            tg.sendData(JSON.stringify(data))
         });
-        let data = {
-            chosen_category: chosen_category
-        }
-        tg.sendData(JSON.stringify(data))
+
 
     /* ВЫБОР КАТЕГОРИИ ДЕТСКИЕ */
         let chosen_category = document.getElementById("cat_free_but").value;
-        cat_free_but.addEventListener("click". () => {
+        cat_kids_but.addEventListener("click". () => {
             document.getElementById("choose_category_menu").style.display = "none";
             document.getElementById("show_events_menu").style.display = "block";
+
+            let data = {
+                chosen_category: chosen_category
+            }
+            tg.sendData(JSON.stringify(data))
         });
-        let data = {
-            chosen_category: chosen_category
-        }
-        tg.sendData(JSON.stringify(data))
+
 
     /* ВЫБОР КАТЕГОРИИ ВЫСТАВКИ */
         let chosen_category = document.getElementById("cat_free_but").value;
-        cat_free_but.addEventListener("click". () => {
+        cat_exhib_but.addEventListener("click". () => {
             document.getElementById("choose_category_menu").style.display = "none";
             document.getElementById("show_events_menu").style.display = "block";
+
+            let data = {
+                chosen_category: chosen_category
+            }
+            tg.sendData(JSON.stringify(data))
         });
-        let data = {
-            chosen_category: chosen_category
-        }
-        tg.sendData(JSON.stringify(data))
+
 
 
     /* ВЫХОД */
