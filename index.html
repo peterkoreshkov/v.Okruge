@@ -41,7 +41,7 @@
                 <button id="show_help_but" class="buttons">Помощь</button>
             </div>
             <div>
-                <button id="exit" class="buttons">Выход</button>
+                <button id="exit_but" class="buttons">Выход</button>
             </div>
         </div>
 
@@ -65,6 +65,34 @@
             </div>
         </div>
 
+        <div id="choose_date_menu" class="choose_date_menu">
+            <h2 class="subtitle">Выберите дату мероприятия</h2>
+            <div>
+                <button id="0days_but" class="buttons">0д</button>
+            </div>
+            <div>
+                <button id="1days_but" class="buttons">1д</button>
+            </div>
+            <div>
+                <button id="2days_but" class="buttons">2д</button>
+            </div>
+            <div>
+                <button id="3days_but" class="buttons">3д</button>
+            </div>
+            <div>
+                <button id="4days_but" class="buttons">4д</button>
+            </div>
+            <div>
+                <button id="5days_but" class="buttons">5д</button>
+            </div>
+            <div>
+                <button id="6days_but" class="buttons">6д</button>
+            </div>
+            <div>
+                <button id="to_menu_from_dates_but" class="buttons">Меню</button>
+            </div>
+        </div>
+
     </div>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
@@ -85,6 +113,12 @@
         search_events_but.addEventListener("click", () => {
             document.getElementById("main_menu").style.display = "none";
             document.getElementById("choose_category_menu").style.display = "block";
+        });
+
+    /* ВЫБОР КАТЕГОРИИ ВСЕ */
+        cat_all_but.addEventListener("click", () => {
+            document.getElementById("choose_category_menu").style.display = "none";
+            document.getElementById("choose_date_menu").style.display = "block";
         });
 
     /* ВЫХОД */
