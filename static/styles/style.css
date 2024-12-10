@@ -10,7 +10,6 @@
     background-color: rgb(26, 126, 219);;
     text-align: center;
     margin: 0px;
-
 }
 
 .screen {
@@ -61,4 +60,6 @@ p {
     color: white;
     background-color: rgb(8, 31, 99);
     font-family: Georgia, serif;
+    border-radius: 15px;
+    border: none;
 }

@@ -98,35 +98,6 @@
 
     </div>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script>
-        let tg = window.Telegram.WebApp;
-        tg.expand();
-
-        to_menu_from_cats_but.addEventListener("click", () => {
-            document.getElementById("choose_category_menu").style.display = "none";
-            document.getElementById("main_menu").style.display = "block";
-        });
-
-        to_menu_from_dates_but.addEventListener("click", () => {
-            document.getElementById("choose_date_menu").style.display = "none";
-            document.getElementById("main_menu").style.display = "block";
-        });
-
-
-        search_events_but.addEventListener("click", () => {
-            document.getElementById("main_menu").style.display = "none";
-            document.getElementById("choose_category_menu").style.display = "block";
-        });
-
-        cat_all_but.addEventListener("click", () => {
-            document.getElementById("choose_category_menu").style.display = "none";
-            document.getElementById("choose_date_menu").style.display = "block";
-        });
-
-        exit_but.addEventListener("click", () => {
-
-            tg.close()
-        });
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
