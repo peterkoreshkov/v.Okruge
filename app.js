@@ -54,7 +54,6 @@ cat_all_but.addEventListener("click", function(){
 //   КНОПКА ВЫБОРА КАТЕГОРИИ БЕСПЛАТНЫЕ
 cat_free_but.addEventListener("click", function(){
     chosen_category = document.getElementById("cat_free_but").value;
-    tg.sendData(chosen_category);
     document.getElementById("choose_category_menu").style.display = "none";
     document.getElementById("confirm_events_menu").style.display = "block";
 });
@@ -62,7 +61,6 @@ cat_free_but.addEventListener("click", function(){
 //   КНОПКА ВЫБОРА КАТЕГОРИИ ДЕТСКИЕ
 cat_kids_but.addEventListener("click", function(){
     chosen_category = document.getElementById("cat_kids_but").value;
-    tg.sendData(chosen_category);
     document.getElementById("choose_category_menu").style.display = "none";
     document.getElementById("confirm_events_menu").style.display = "block";
 });
@@ -70,7 +68,6 @@ cat_kids_but.addEventListener("click", function(){
 //  КНОПКА ВЫБОРА КАТЕГОРИИ ВЫСТАВКИ
 cat_exhib_but.addEventListener("click", function(){
     chosen_category = document.getElementById("cat_exhib_but").value;
-    tg.sendData(chosen_category);
     document.getElementById("choose_category_menu").style.display = "none";
     document.getElementById("confirm_events_menu").style.display = "block";
 });
